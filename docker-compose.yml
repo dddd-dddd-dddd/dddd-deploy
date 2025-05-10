@@ -37,3 +37,6 @@ services:
     volumes:
       - ./config.yaml:/app/config.yaml
       - ./data/dddd-share-server/:/app/data/
+      - ./list.js:/app/resource/public/list.js
+      - /proc:/host/proc:ro    # 挂载宿主机的 /proc 目录，只读
+      - /sys:/host/sys:ro      # 挂载宿主机的 /sys 目录，只读
